@@ -207,21 +207,18 @@ playBtn.addEventListener("click", () => {
         tempo,
         () => ((playBtn.disabled = false), (playBtn.style.color = "black"))
       );
-      body.style.backgroundImage =
-        "url(https://cdn.pixabay.com/photo/2018/01/09/15/30/illustration-3071852_960_720.jpg)";
+      body.style.backgroundImage = "url(images/stars.jpg)";
       marquee.style.display = "block";
       break;
     case "2":
       playBtn.style.color = "#e8e8c1";
-      body.style.backgroundImage =
-        "url(https://cdn.pixabay.com/photo/2023/01/14/09/51/forest-landscape-7717839_960_720.jpg)";
+      body.style.backgroundImage = "url(images/snow.jpg)";
 
       marquee.style.display = "block";
       marquee.style.color = "#e8e8c1";
       song(iceScater, tempo, () => (playBtn.disabled = false));
       setTimeout(() => {
-        body.style.backgroundImage =
-          "url(https://cdn.pixabay.com/photo/2019/12/26/19/09/happy-new-year-4721009_640.jpg)";
+        body.style.backgroundImage = "url(images/newyear.jpg)";
         body.style.backgroundSize = "50%";
         body.style.backgroundRepeat = "repeat";
         marquee.style.display = "none";

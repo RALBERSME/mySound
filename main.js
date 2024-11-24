@@ -17,7 +17,6 @@ function startPlay() {
     accordeon.style.animation = "moveAccordeon 2s ease-in-out forwards";
     setTimeout(() => {
       bark.pause();
-      console.log("I am in 19000");
       crash.play();
     }, 2000);
   }, 17000);
