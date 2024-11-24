@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="piano.css" />
+    <title>Piano</title>
+  </head>
+  <body>
+    <marquee width="60%" direction="down" height="450px"
+      >Wonderful season greetings from Reinhild!</marquee
+    >
+    <div class="container">
+      <div class="piano__interface">
+        <div class="header">
+          <h1>
+            Ok, then play yourself by pressing the piano keys <br />-- or choose
+            one of the songs on the right side and press "play":
+          </h1>
+          <div class="playlist">
+            <div class="selectors">
+              <select class="piano__song-list">
+                <option class="option" value="1">
+                  Snow Waltz (Schneewalzer)
+                </option>
+                <option class="option" value="2">
+                  Ice Scater (Schlittschuhläufer)
+                </option>
+              </select>
+              <select class="piano__tempo">
+                <option class="option" value="3">Slow Speed</option>
+                <option class="option" value="2" selected>Normal Speed</option>
+                <option class="option" value="1">Fast Speed</option>
+              </select>
+              <button id="play" class="piano__play-btn">Play</button>
+              <button
+                style="width: 75px"
+                id="play"
+                class="piano__play-btn"
+                onClick="location.reload(); "
+              >
+                Refresh
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="piano__keyboard"></div>
+    </div>
+    <script src="piano.js"></script>
+  </body>
+</html>

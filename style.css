@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2019/03/28/10/19/sunset-4086848_640.jpg");
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+#dogs {
+  position: absolute;
+}
+#accordeon {
+  position: absolute;
+  top: 7.5%;
+  left: 35%;
+  transform: rotate(0deg);
+  animation: toggleAccordeon 2s ease infinite;
+}
+
+@keyframes moveAccordeon {
+  0% {
+    top: 7.5%;
+    left: 35%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 140%;
+    left: 25%;
+    transform: rotate(-270deg);
+  }
+}
+@keyframes toggleAccordeon {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.container {
+  margin: 5px;
+  position: relative;
+}
+
+.dog {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+#cta {
+  text-align: center;
+  animation: clickDog 3s ease-in-out infinite;
+}
+
+@keyframes clickDog {
+  0% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+#point {
+  position: absolute;
+  display: none;
+  top: 20%;
+  left: 35%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  animation: bark 4s ease-in-out infinite;
+}
+
+@keyframes bark {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#paw {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  transform: rotate(-50deg);
+  opacity: 0;
+  animation: movePaw 2s 14.9s linear forwards;
+}
+
+@keyframes movePaw {
+  0% {
+    top: 10%;
+    right: 5%;
+    transform: rotate(-50deg);
+    opacity: 0;
+  }
+  1% {
+    top: 10%;
+    right: 5%;
+    transform: rotate(-50deg);
+    opacity: 1;
+  }
+  100% {
+    top: 12%;
+    right: 10%;
+    transform: rotate(-80deg);
+    opacity: 1;
+  }
+}

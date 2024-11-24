@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  height: 100vh;
+  background-image: url("images/ocean.jpg");
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  font-family: "Protest Revolution", sans-serif;
+  letter-spacing: 2;
+}
+.container {
+  width: 1600px;
+  border-radius: 15px;
+  margin-top: 8%;
+  margin-left: 0%;
+  box-shadow: 5px 5px 10px 2px rgb(40, 40, 40);
+  transform: rotate3d(1, 0, 1, 95deg);
+  animation: movePiano 3s ease-in-out forwards;
+}
+.header {
+  text-align: center;
+  background-color: black;
+  color: #e8e8c1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+@keyframes movePiano {
+  0% {
+    margin-top: 8%;
+    margin-left: 0%;
+    transform: rotate3d(1, 0, 1, 95deg);
+  }
+  100% {
+    margin-top: 27%;
+    margin-left: 10%;
+    transform: rotate3d(1, 0, 1, 0deg);
+  }
+}
+#play {
+  background-image: linear-gradient(-180deg, #e8e8c1 0%, #fbfbd2 100%);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 0.75rem;
+  text-decoration: none;
+  width: 10%;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#play:hover {
+  background-image: linear-gradient(-180deg, #e8e8c1 0%, #c8c8a6 100%);
+}
+
+.piano__keyboard {
+  width: 100%;
+  height: 300px;
+  background: #000;
+  display: flex;
+}
+.piano__key {
+  width: 30px;
+  height: 100%;
+  padding: 0;
+  margin: 0 1px;
+  background: #fffff0;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+.empty-space {
+  position: relative;
+}
+.piano__key--black {
+  background: #000;
+  color: #fff;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+.piano__key--black:hover {
+  box-shadow: inset -3px -3px 3px whitesmoke;
+  transition: all 0.2s;
+}
+.piano__key--white {
+  padding-top: 180px;
+}
+.piano__key--white:hover {
+  box-shadow: inset -1px -1px 5px 2px black;
+  transition: all 2s;
+  background: #e8e8c1;
+}
+.piano__key--playing {
+  background: #e8e8c1;
+}
+
+.piano__song-list {
+  background: #1b1a1a;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #e8e8c1;
+  font-size: 16px;
+  padding: 1rem 0.75rem;
+  text-decoration: none;
+  width: 75%;
+  border: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.option {
+  border-radius: 5%;
+  background: #1b1a1a !important;
+  color: #e8e8c1 !important;
+}
+.piano__tempo {
+  background: #1b1a1a;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #e8e8c1;
+  font-size: 16px;
+  padding: 1rem 0.75rem;
+  text-decoration: none;
+  width: 45%;
+  border: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.selectors {
+  display: flex;
+  gap: 5px;
+}
+
+marquee {
+  position: absolute;
+  color: rgb(3, 97, 99);
+  top: -50%;
+  font-size: 3.5rem;
+  letter-spacing: 1.2;
+  font-family: "Protest Revolution", sans-serif;
+  font-style: italic;
+  margin-left: 25%;
+  display: none;
+}
