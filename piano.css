@@ -42,7 +42,7 @@ body {
     transform: rotate3d(1, 0, 1, 95deg);
   }
   100% {
-    margin-top: 27%;
+    margin-top: 25%;
     margin-left: 10%;
     transform: rotate3d(1, 0, 1, 0deg);
   }
@@ -123,7 +123,7 @@ body {
   font-size: 16px;
   padding: 1rem 0.75rem;
   text-decoration: none;
-  width: 75%;
+  width: 89%;
   border: 0;
   margin-bottom: 5px;
   cursor: pointer;

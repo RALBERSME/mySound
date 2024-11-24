@@ -49,6 +49,9 @@ let blackButtons = [];
 let snowWaltz = `C3, D3, E3,,,G3, E3,,,G3,E3,,,,D3,E3,F3,,,G3,F3,,,G3,F3,,,,,G3,A3,B3,,,F4,B3,,,F4,B3,,,,,A3,B3,C4,,,E4,C4,,,A3,G3,,,,,C3,D3,E3,,,G3,E3,,,G3,E3,,,,D3,E3,F3,,,G3,F3,,,G3,F3,,,,,G3,A3,B3,,,F4,B3,,,F4,B3,,,,,A3,B3,C4,,,G3,E4,,,D4,C4,,,,E3, G3, C4,,,,B3,,,,D4,,,,C4,,,,A3,,C4,A4,,C4, A3,,,,,G3,A3,B3,,,,A3,,,,F3,,,,,E3,F3,A3,,,,G3,,,,E3,,,,,E3,G3,C4,,,,,B3,,,,D4,,,,C4,,,,A3,,C4,A3,,C4,A3,,,,,G3,A3,B3,,,,A3,,,G3,B3,,,,A3,,,G3,G3,F3,G3,E4,,,D4,C4,,,,,E4,D4,C4,,,G3,A3,,,G3,B3,,,,,D4,C4,B3,,,F3,B3,,,A3,G3,,,,E4,D4,C4,,,G3,A4,,,G4,B3,,,,,F4,E4,D4,,,G3,D4,,,E4,C4,,,,,`;
 
 let iceScater = `E3,,,,G3,,,A3, A3,,,,,,,F3,,,,A3,,,B3, B3,,,,,,,D4,,,,C4,,,E3,G3,,,,F3,,,E3,E3,,,,D3,,,,C3,,,,,,,E3,,,,G3,,,A3, A3,,,,,,,F3,,,,A3,,,B3, B3,,,,,,,D4,,,,C4,,,E3,G3,,,,F3,,,E3,E3,,,,D3,,,,C3,,,, `;
+
+let froehlicheW = `G3,F3,E3,F3,G3,,E3,,C3,,D3,,E3,,,,,E3,D3,C3,D3,E3,,C3,,G2,,B2,,C3,,,,,D3,,G3,,G3,,,,,E3,,G3,,G3,,,,,D3,,A3,,G3,,E3,,G3,,F3,E3,D3,,,,,G3,F3,E3,F3,G3,,E3,,C3,,D3,,E3,,,,,E3,D3,C3,D3,E3,,C3,,G2,,B2,,C3,,,,,D3,,E3,F3,,D3,,E3,F3,G3,,,,,A3,,G3,,F3,,E3,,F3,,,,,D3,,E3,F3,,D3,,E3,,F3,,G3,,,,,G2,,E3,,E3,,D3,,C3,,,,
+`;
 let song = (notesString, tempo = 2, cb) => {
   let notes = notesString.split(",");
   let currentNote = 0;
@@ -224,6 +227,20 @@ playBtn.addEventListener("click", () => {
         marquee.style.display = "none";
       }, 26000);
 
+      break;
+    case "3":
+      playBtn.style.color = "#e8e8c1";
+      body.style.backgroundImage = "url(images/santa.jpg)";
+
+      marquee.style.display = "block";
+      marquee.style.color = "#e8e8c1";
+      song(froehlicheW, tempo, () => (playBtn.disabled = false));
+      setTimeout(() => {
+        body.style.backgroundImage = "url(images/background.png)";
+        body.style.backgroundSize = "23%";
+        body.style.backgroundRepeat = "repeat-x";
+        marquee.style.display = "none";
+      }, 29000);
       break;
   }
 });
